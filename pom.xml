@@ -74,6 +74,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -83,14 +89,14 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!--<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.18.1</version>
                 <configuration>
                     <runOrder>alphabetical</runOrder>
                     <includes>
-                        <include>**/PetStoreRunner.java</include>
+                        <include>**/TestRunner.java</include>
                     </includes>
                 </configuration>
                 <executions>
@@ -115,14 +121,14 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>Alphasense assignment project</projectName>
+                            <projectName>Classplus test assignment</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-custom-reports</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber-html-reports/cucumber.json
                             </cucumberOutput>
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
 
         </plugins>
     </build>
